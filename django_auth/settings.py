@@ -78,11 +78,14 @@ WSGI_APPLICATION = 'django_auth.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'auth',
+        'USER': 'isaac',
+    'PASSWORD':'morzy',
     }
 }
+
 
 
 # Password validation
@@ -109,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -135,5 +138,5 @@ AUTHENTICATION_BACKENDS = (
  'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY =''  #Paste CLient Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' #Paste Secret Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='223286924618-6d9a3f28kd0c23qsh8kn15afpp9rpqhs.apps.googleusercontent.com'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'SE8GXGp774WzivJRzsIeA1I3' #Paste Secret Key
